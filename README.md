@@ -88,7 +88,7 @@ git push origin main
 
 # branch
 
-- để muốn xem mình đang ở branch nào
+- để muốn xem tất cả các branch, và branch hiện tại của mình (branch có dấu \*)
 
 ```
 git branch
@@ -110,4 +110,20 @@ git checkout tenNhanh
 
 ```
 git branch -b ten/nhanh/moi
+```
+
+## hiển thị các branch trên remote
+
+```
+git branch -r
+```
+
+## hiện thị vị trí của tất cả các branch
+
+- branch hiện tại: \*, màu xanh
+- branch ở local; màu trắng
+- branch ở remote: màu đỏ
+
+```
+git branch -a
 ```
