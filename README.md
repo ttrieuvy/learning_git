@@ -127,3 +127,25 @@ git branch -r
 ```
 git branch -a
 ```
+
+## đổi tên branch
+
+```
+git branch -m tenBranchMoi
+```
+
+- chỉ đổi đc tên ở dưới local, nếu branch đã có trên remote thì khi push lên sẽ tạo thêm 1 branch mới chứ k đổi tên
+
+## Xóa branch
+
+### ở local
+
+```
+git branch -D
+```
+
+### ở remote
+
+```
+git push origin --delete tenBranchMuonXoa
+```
