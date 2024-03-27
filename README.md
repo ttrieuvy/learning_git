@@ -37,26 +37,6 @@ Sau đó, bạn cần liên kết kho lưu trữ Git của mình với kho lưu 
 * Chạy lệnh git push -u origin master để đẩy các thay đổi lên kho lưu trữ trên GitHub. Lưu ý rằng master có thể thay đổi thành tên nhánh bạn đang sử dụng nếu bạn không đang làm việc trên nhánh master.
 ```
 
-## Các lệnh hay dùng trên git
-
-1. Kiểm tra xem có commit nào trong kho lưu trữ của bạn không
-
-```
-git log
-```
-
-2. Kiểm tra xem bạn đang ở nhánh nào
-
-```
-git branch
-```
-
-3. Kiểm tra xem bạn đã liên kết kho lưu trữ từ xa đúng cách không
-
-```
-git remote -v
-```
-
 # Git log
 
 - nó sẽ hiện ra chi tiết những lần commit gần đây của mình
@@ -112,6 +92,12 @@ git checkout tenNhanh
 git branch -b ten/nhanh/moi
 ```
 
+## push branch lên remote
+
+```
+git push -u origin tenBranch
+```
+
 ## hiển thị các branch trên remote
 
 ```
@@ -126,4 +112,32 @@ git branch -r
 
 ```
 git branch -a
+```
+
+## đổi tên branch
+
+```
+git branch -m tenBranchMoi
+```
+
+- chỉ đổi đc tên ở dưới local, nếu branch đã có trên remote thì khi push lên sẽ tạo thêm 1 branch mới chứ k đổi tên
+
+## Xóa branch
+
+### ở local
+
+```
+git branch -D
+```
+
+### ở remote
+
+```
+git push origin --delete tenBranchMuonXoa
+```
+
+## cập nhật các branch đã xóa hoặc đã tạo trên remote
+
+```
+git fetch -p
 ```
