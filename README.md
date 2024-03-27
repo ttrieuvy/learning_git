@@ -57,9 +57,10 @@ git branch
 git remote -v
 ```
 
-
 # Git log
+
 - nó sẽ hiện ra chi tiết những lần commit gần đây của mình
+
 ```
 git log
 ```
@@ -86,3 +87,43 @@ git push origin main
 => với trường hợp đã có nhánh mặc định thì chỉ cần lệnh `git push` thôi là đủ
 
 # branch
+
+- để muốn xem tất cả các branch, và branch hiện tại của mình (branch có dấu \*)
+
+```
+git branch
+```
+
+## tạo branch mới từ main
+
+```
+git branch ten/nhanh/moi
+```
+
+## chuyển branch
+
+```
+git checkout tenNhanh
+```
+
+## tạo branch mới từ branch hiện tại và chuyển qua đó luôn
+
+```
+git branch -b ten/nhanh/moi
+```
+
+## hiển thị các branch trên remote
+
+```
+git branch -r
+```
+
+## hiện thị vị trí của tất cả các branch
+
+- branch hiện tại: \*, màu xanh
+- branch ở local; màu trắng
+- branch ở remote: màu đỏ
+
+```
+git branch -a
+```
